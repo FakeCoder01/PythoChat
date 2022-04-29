@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PythoChat</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="/reg/" method="POST">
+            <div class="create-form">
+                <div class="room-details">
+                    <div class="input-area">
+                        <input type="text" class="form-control" name="room_name" id="room_name" placeholder="Room name.." required>
+                    </div>
+                    <div class="input-area">
+                        <input type="password" class="form-control" name="room_psw" id="room_psw" placeholder="Password.." required>
+                    </div>
+                </div>
+                <div class="user-details">
+                    <div class="input-area">
+                        <input type="text" class="form-control" name="user_name" id="user_name" placeholder="Username.." required>
+                    </div>
+                </div>
+                <div class="submit-area">
+                    {% csrf_token %}
+                    <button type="submit" name="submit">Chat Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
